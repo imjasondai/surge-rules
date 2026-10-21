@@ -14,7 +14,7 @@
 ## 在 Surge 中引用
 
 ```
-RULE-SET,https://fastly.jsdelivr.net/gh/<用户名>/surge-rules@main/rules/US.list,US,extended-matching
+RULE-SET,https://fastly.jsdelivr.net/gh/imjasondai/surge-rules@main/rules/US.list,US,extended-matching
 ```
 
 用 jsDelivr 是因为国内能直接访问。它有缓存，推送后 GitHub Actions 会自动刷新改动文件的缓存；刷新失败时最多 12 小时后生效。

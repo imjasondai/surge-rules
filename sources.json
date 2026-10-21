@@ -1,0 +1,12 @@
+{
+  "_说明": "上游规则集来源。scripts/sync.py 每天把它们同步到 upstream/，请勿手改 upstream/ 下的文件；要去掉某条上游规则，写进 exclude/<名称>.list",
+  "AdBlock": "https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/AdBlock.list",
+  "Domestic": "https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/Domestic.list",
+  "Proxy": "https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/Proxy.list",
+  "Microsoft": "https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/Microsoft.list",
+  "AI-Suite": "https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/AI%20Suite.list",
+  "Apple": "https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/Apple.list",
+  "Domestic-IPs": "https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/Domestic%20IPs.list",
+  "Apple-CN": "https://ruleset.skk.moe/List/non_ip/apple_cn.conf",
+  "China-ASN": "https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.list"
+}

@@ -1,0 +1,30 @@
+# Apple-AI.list
+# 用途：Apple Intelligence
+# 策略组：Apple AI
+# 来源：ryanbuu/surge-rules（复制后自维护）
+# 整理日期：2026-10-22
+# 规则数：22
+
+# Apple AI
+DOMAIN,guzzoni.apple.com
+DOMAIN,mask-api.fe.apple-dns.net
+DOMAIN,mask-api.icloud.com
+DOMAIN,mask-t.apple-dns.net
+DOMAIN,mask.apple-dns.net
+DOMAIN-SUFFIX,smoot.apple.com
+DOMAIN-SUFFIX,apple-relay.apple.com
+DOMAIN-SUFFIX,apple-relay.cloudflare.com
+DOMAIN-SUFFIX,apple-relay.fastly-edge.com
+DOMAIN-SUFFIX,apple-relay.mask.apple-dns.net
+DOMAIN-SUFFIX,cp4.cloudflare.com
+DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com
+DOMAIN-SUFFIX,gateway.icloud.com
+DOMAIN-SUFFIX,ls.apple.com
+DOMAIN-SUFFIX,mask-h2.icloud.com
+DOMAIN-SUFFIX,mask.icloud.com
+DOMAIN-SUFFIX,apps.mzstatic.com
+DOMAIN-SUFFIX,apple-cloudcompute.com
+DOMAIN-SUFFIX,apple-ai.com
+DOMAIN-SUFFIX,siri.apple.com
+DOMAIN-KEYWORD,apple-ml
+DOMAIN-KEYWORD,siri

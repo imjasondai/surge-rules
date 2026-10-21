@@ -1,0 +1,14 @@
+# Apple-CN（上游同步，请勿手改；要排除规则请写 exclude/Apple-CN.list）
+# 来源：https://ruleset.skk.moe/List/non_ip/apple_cn.conf
+# 同步时间：2026-10-21 23:52 UTC
+# 规则数：10（排除 0 条）
+DOMAIN,7h15.ru1353t.1s.m4d3.by.5ukk4w.skk.moe
+DOMAIN-SUFFIX,apple.com.cn
+DOMAIN-SUFFIX,cn.apple.com
+DOMAIN-SUFFIX,icloud.com.cn
+DOMAIN-SUFFIX,cn.ls.apple.com
+DOMAIN,api.smoot.apple.cn
+DOMAIN-SUFFIX,cn-ssl.ls.apple.com
+DOMAIN,gs-loc-cn.apple.com
+DOMAIN-SUFFIX,gspe19-cn-ssl.ls.apple.com
+DOMAIN,appleintelligencefeedback.care.apple.com

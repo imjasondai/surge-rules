@@ -1,0 +1,16 @@
+# F1.list — F1 TV App（F1 官方 App，Apple TV / iPhone / Mac 通用）
+# 来源：dler-io F1 TV.list（2026-10-21）整理；策略组：F1 TV（美区账号 → 美国出口，默认 DMIT LAX）
+# 维护：看比赛时在 Surge「最近请求」里按 Apple TV 的 IP 筛选，把新出现的 F1 域名补进来
+
+# 账号、接口、目录、网页（包含 f1tv.formula1.com 等所有子域名）
+DOMAIN-SUFFIX,formula1.com
+# 直播与点播视频流（CDN 节点，F1 更换 CDN 后需要更新）
+DOMAIN,f1prodlive.akamaized.net
+DOMAIN,d2n9h2wits23hf.cloudfront.net
+# 播放器服务（Bitmovin），F1 TV 播放需要
+DOMAIN-SUFFIX,bitmovin.com
+
+# F1 游戏 / 电竞（不影响看比赛，可删）
+DOMAIN-SUFFIX,f1play.com
+DOMAIN-SUFFIX,f1manager.com
+DOMAIN-SUFFIX,f1esports.com

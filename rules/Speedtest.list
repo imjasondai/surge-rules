@@ -1,0 +1,16 @@
+# Speedtest.list
+# 用途：Speedtest
+# 策略组：Speedtest
+# 来源：dler-io/Rules（复制后自维护）
+# 整理日期：2026-10-22
+# 规则数：8
+
+# Speedtest
+DOMAIN-SUFFIX,fast.com
+DOMAIN-SUFFIX,speed.cloudflare.com
+DOMAIN-SUFFIX,ooklaserver.net
+DOMAIN,speed.dler.io
+DOMAIN-SUFFIX,speedtest.co
+DOMAIN-SUFFIX,speedtest.net
+DOMAIN-SUFFIX,speedtestcustom.com
+USER-AGENT,SpeedTest*

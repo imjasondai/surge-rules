@@ -1,0 +1,17 @@
+# DisneyPlus.list
+# 用途：Disney+
+# 策略组：Disney Plus
+# 来源：dler-io/Rules（复制后自维护）
+# 整理日期：2026-10-22
+# 规则数：9
+
+# Disney+
+DOMAIN-SUFFIX,cdn.registerdisney.go.com
+DOMAIN-SUFFIX,disney-plus.net
+DOMAIN-SUFFIX,disney.api.edge.bamgrid.com
+DOMAIN-SUFFIX,disney.connections.edge.bamgrid.com
+DOMAIN-SUFFIX,disneynow.com
+DOMAIN-SUFFIX,disneyplus.com
+DOMAIN-SUFFIX,disneystreaming.com
+DOMAIN-SUFFIX,dssott.com
+USER-AGENT,Disney*

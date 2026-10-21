@@ -1,0 +1,13 @@
+# AppleNews.list
+# 用途：Apple News
+# 策略组：Apple TV
+# 来源：dler-io/Rules（复制后自维护）
+# 整理日期：2026-10-22
+# 规则数：5
+
+# Apple News
+DOMAIN-SUFFIX,apple.comscoreresearch.com
+DOMAIN-SUFFIX,apple.news
+DOMAIN,gspe1-ssl.ls.apple.com
+USER-AGENT,AppleNews*
+USER-AGENT,com.apple.news*

@@ -1,0 +1,15 @@
+# AI.list
+# 用途：自定义 AI 规则；必须排在 Microsoft 规则集之前
+# 策略组：AI Suite
+# 来源：自维护
+# 整理日期：2026-10-22
+# 规则数：7
+
+# M365 Copilot（这些域名也在 Microsoft 里，需要优先匹配）
+DOMAIN-SUFFIX,svc.cloud.microsoft
+DOMAIN-SUFFIX,m365.cloud.microsoft
+DOMAIN,substrate.office.com
+DOMAIN,ecs.office.com
+DOMAIN,graph.microsoft.com
+DOMAIN,teams.microsoft.com
+DOMAIN-SUFFIX,trouter.skype.com

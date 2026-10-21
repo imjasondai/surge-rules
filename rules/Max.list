@@ -1,0 +1,25 @@
+# Max.list
+# 用途：Max (HBO)
+# 策略组：Max
+# 来源：dler-io/Rules（复制后自维护）
+# 整理日期：2026-10-22
+# 规则数：17
+
+# Max
+DOMAIN,app-analytics-services.com
+DOMAIN-SUFFIX,branch.io
+DOMAIN,kpck4q-launches.appsflyersdk.com
+DOMAIN,kpck4q-skadsdkless.appsflyersdk.com
+DOMAIN,o0137140.ingest.us.sentry.io
+DOMAIN,out053a3bejgh7t0phqa0csou.litix.io
+DOMAIN,sdk.iad-01.braze.com
+DOMAIN-SUFFIX,arkoselabs.com
+DOMAIN-SUFFIX,brightline.tv
+DOMAIN-SUFFIX,cdn.turner.com
+DOMAIN-SUFFIX,discomax.com
+DOMAIN-SUFFIX,hbo.com
+DOMAIN-SUFFIX,hbomax.com
+DOMAIN-SUFFIX,max.com
+DOMAIN-SUFFIX,ngtv.io
+DOMAIN-SUFFIX,pypestream.com
+DOMAIN-SUFFIX,warnermediacdn.com

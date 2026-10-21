@@ -1,0 +1,15 @@
+# Netflix.list
+# 用途：Netflix
+# 策略组：Netflix
+# 来源：dler-io/Rules（复制后自维护）
+# 整理日期：2026-10-22
+# 规则数：7
+
+# Netflix
+DOMAIN-SUFFIX,netflix.com
+DOMAIN-SUFFIX,netflix.net
+DOMAIN-SUFFIX,nflxext.com
+DOMAIN-SUFFIX,nflximg.com
+DOMAIN-SUFFIX,nflximg.net
+DOMAIN-SUFFIX,nflxso.net
+DOMAIN-SUFFIX,nflxvideo.net

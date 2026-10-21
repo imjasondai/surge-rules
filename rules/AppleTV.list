@@ -1,0 +1,14 @@
+# AppleTV.list — Apple TV App（Apple TV+、Apple TV App 里的 F1 直播等）
+# 来源：dler-io Apple TV.list（2026-10-21）；策略组：Apple TV（美区账号 → 美国出口）
+# 必须排在 Apple.list（整个 apple.com）之前，否则会被 Apple Services 组提前匹配
+# 维护：看 Apple TV App 里的 F1 时，在 Surge「最近请求」里核对实际访问的域名并补充
+
+# 节目目录、页面、视频分发（包含 *.tv.apple.com 的视频节点）
+DOMAIN-SUFFIX,tv.apple.com
+# 播放授权与节目数据
+DOMAIN,play-edge.itunes.apple.com
+DOMAIN,np-edge.itunes.apple.com
+DOMAIN,uts-api.itunes.apple.com
+
+# 待验证（看直播时用 Surge 抓到再启用，别凭猜测加进来）：
+# 直播/体育赛事的视频分片和 FairPlay 授权可能走 *.itunes.apple.com 下的其他主机名

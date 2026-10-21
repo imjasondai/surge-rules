@@ -1,0 +1,12 @@
+# Longbridge.list
+# 用途：长桥证券
+# 策略组：Longbridge
+# 来源：自维护
+# 整理日期：2026-10-22
+# 规则数：4
+
+# 长桥
+DOMAIN-SUFFIX,longbridge.com
+DOMAIN-SUFFIX,longbridge.cn
+DOMAIN-SUFFIX,longbridgeapp.com
+DOMAIN-SUFFIX,lbkrs.com

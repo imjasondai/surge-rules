@@ -1,0 +1,14 @@
+# Steam.list
+# 用途：Steam
+# 策略组：Steam
+# 来源：dler-io/Rules（复制后自维护）
+# 整理日期：2026-10-22
+# 规则数：6
+
+# Steam
+DOMAIN-SUFFIX,s.team
+DOMAIN-SUFFIX,steamcommunity.com
+DOMAIN-SUFFIX,steamgames.com
+DOMAIN-SUFFIX,steampowered.com
+DOMAIN-SUFFIX,steamstatic.com
+DOMAIN-SUFFIX,steamusercontent.com

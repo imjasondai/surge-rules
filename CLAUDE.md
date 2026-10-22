@@ -27,7 +27,8 @@
 | AI.list | AI Suite | **必须在 upstream/Microsoft、upstream/AI-Suite 之前** |
 | JP.list | JP | 在 AsianTV 之前 |
 | Proxy-Custom.list | Proxy | — |
-| Direct-Custom.list | DIRECT | 在 AdBlock 之前（sc.omtrdc.net 等有意覆盖的情况见 US.list） |
+| GlobalMedia.list | Proxy | 原 Global TV 主站，保持走代理（待并入 Proxy-Custom） |
+| Direct-Custom.list | DIRECT | **在 AdBlock 之后**（否则迅雷等广告域名会被放行；sc.omtrdc.net 的有意放行见 US.list） |
 | Nintendo.list | Switch | 在 upstream/Proxy、Domestic 之前 |
 | Longbridge.list | Longbridge | 在 Domestic 之前 |
 | F1.list | F1 TV（美国出口） | — |

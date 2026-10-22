@@ -1,0 +1,70 @@
+# GlobalMedia.list
+# 用途：原 Global TV 组里不再单独分组的海外网站（主站域名），保持走代理，避免这些被墙网站变成直连
+# 策略组：Proxy
+# 来源：dler-io/Rules 原 Global TV 12 个规则集，去掉了 F1、已在 Proxy 里的域名和视频 CDN 节点
+# 整理日期：2026-10-22
+# 规则数：40
+
+# ABC
+DOMAIN-SUFFIX,edgedatg.com
+
+# Amazon Prime Video
+DOMAIN-SUFFIX,aiv-cdn.net
+DOMAIN-SUFFIX,aiv-delivery.net
+DOMAIN-SUFFIX,amazonvideo.com
+DOMAIN-SUFFIX,atv-ps-eu.amazon.co.uk
+DOMAIN-SUFFIX,primevideo.com
+DOMAIN-SUFFIX,pv-cdn.net
+DOMAIN-SUFFIX,video.a2z.com
+
+# BBC
+DOMAIN-SUFFIX,bbc.co
+DOMAIN-SUFFIX,bbc.co.uk
+DOMAIN-SUFFIX,bbc.com
+DOMAIN-SUFFIX,bbci.co
+DOMAIN-SUFFIX,bbci.co.uk
+DOMAIN-SUFFIX,bidi.net.uk
+
+# DAZN
+DOMAIN-SUFFIX,dazn-api.com
+DOMAIN-SUFFIX,dazn.com
+DOMAIN-SUFFIX,dazndn.com
+DOMAIN-SUFFIX,indazn.com
+DOMAIN-SUFFIX,indaznlab.com
+
+# Discovery+
+DOMAIN-SUFFIX,disco-api.com
+DOMAIN-SUFFIX,discoveryplus.com
+DOMAIN-SUFFIX,getblueshift.com
+DOMAIN-SUFFIX,litix.io
+DOMAIN-SUFFIX,uplynk.com
+
+# encoreTVB
+DOMAIN-SUFFIX,encoretvb.com
+
+# Fox
+DOMAIN-SUFFIX,fox.com
+DOMAIN-SUFFIX,foxdcg.com
+
+# Hulu
+DOMAIN-SUFFIX,hulu.com
+DOMAIN-SUFFIX,huluad.com
+DOMAIN-SUFFIX,huluim.com
+DOMAIN-SUFFIX,hulumail.com
+DOMAIN-SUFFIX,huluqa.com
+DOMAIN-SUFFIX,hulustream.com
+
+# Pandora
+DOMAIN-SUFFIX,pandora.com
+
+# PBS
+DOMAIN-SUFFIX,pbs.org
+
+# Pornhub
+DOMAIN-SUFFIX,phncdn.com
+DOMAIN-SUFFIX,phprcdn.com
+DOMAIN-SUFFIX,pornhub.com
+DOMAIN-SUFFIX,pornhubpremium.com
+
+# SoundCloud
+DOMAIN-SUFFIX,soundcloudmail.com

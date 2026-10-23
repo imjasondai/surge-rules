@@ -1,9 +1,16 @@
 # Porn-Custom.list
-# 用途：成人视频网站（2026-10-23 从 Proxy-Custom.list 分出）
+# 用途：成人视频网站（2026-10-23 从 Proxy-Custom.list 分出，含原 Global TV 组的 Pornhub）
 # 策略组：Proxy
 # 来源：自维护
 # 整理日期：2026-10-23
-# 规则数：2
+# 规则数：6
 
+# Jable、MissAV
 DOMAIN-SUFFIX,jable.tv
 DOMAIN-SUFFIX,missav.live
+
+# Pornhub
+DOMAIN-SUFFIX,phncdn.com
+DOMAIN-SUFFIX,phprcdn.com
+DOMAIN-SUFFIX,pornhub.com
+DOMAIN-SUFFIX,pornhubpremium.com

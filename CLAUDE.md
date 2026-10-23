@@ -39,7 +39,7 @@
 | Netflix / DisneyPlus / YouTube / Max / Spotify | 同名 | — |
 | AsianTV.list | Asian TV | — |
 | CN-Media.list | Domestic | 在 upstream/Proxy 之前 |
-| Apple-AI.list | Apple AI（建议选美国） | **在 Direct-Custom 之后、upstream/AI-Suite 之前**（apple-relay、cp4、gspe1-ssl 与 AI-Suite 重叠，要归 Apple AI）；也在 AppleNews、upstream/Apple 之前 |
+| Apple-AI.list | Apple AI（用户选美国 LAX，Siri / Apple 智能需要） | **放在最前面，在 Direct-Custom / Special 之前**：用户要求整个 ls.apple.com 定位服务（包括国内 Apple 地图 cn.ls.apple.com）都走 Apple AI 组，Siri AI 才能正常用；也在 AI-Suite、AppleNews、upstream/Apple 之前 |
 | AppleMusic / ApplePush | 同名 | 在 upstream/Apple 之前 |
 | GoogleFCM / Telegram | 同名 | — |
 | Discord / PayPal / Speedtest / Steam | **Proxy**（2026-10-23 起不再单独分组） | — |
@@ -53,13 +53,13 @@
 # 本地规则（不进公开仓库）
 SRC-IP,192.168.0.109           → Switch         Switch 主机
 WOL 个人 Worker 域名           → DIRECT
+rules/Apple-AI                 → Apple AI       最前面：整个 ls.apple.com 走 Apple AI（Siri AI 需要，用户 2026-10-23 确认）
 # 必须在 AdBlock 之前（有意放行的广告/统计域名）
 rules/US-Custom                → US             sc.omtrdc.net
 rules/JP-Custom                → JP             Yahoo Japan 广告子域名；含 DMM/FANZA（须在 AsianTV 之前，已满足）
 # 去广告
 upstream/AdBlock               → AdBlock
-rules/Direct-Custom            → DIRECT         在 AdBlock 之后（迅雷广告要先被拦）；在 Apple-AI 之前（国内 Apple 地图直连）
-rules/Apple-AI                 → Apple AI       在 AI-Suite、AppleNews、Apple 之前
+rules/Direct-Custom            → DIRECT         在 AdBlock 之后（迅雷广告要先被拦）
 rules/Longbridge               → Longbridge     在 Domestic 之前
 rules/Nintendo                 → Switch         在 Proxy、Domestic 之前
 # 流媒体
@@ -101,7 +101,7 @@ FINAL                          → Direct,dns-failed
 
 07 的 RULE-SET 行都没有加 `no-resolve`（域名类规则集加 `extended-matching`），08 沿用，不要顺手改。
 
-与 07 版的差别：07 把 Apple-AI 放在最前面，导致国内 Apple 地图（cn.ls.apple.com 等）走了 Apple AI 组；改为在 Direct-Custom 之后，只有这 3 个网址改为直连，其余不变。
+Apple-AI 的位置与 07 相同（最前面）。曾评估改到 Direct-Custom 之后让国内 Apple 地图直连，用户否决：Siri AI 需要定位服务走 LAX。
 
 ## 工作流程
 

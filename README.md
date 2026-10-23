@@ -30,7 +30,7 @@ RULE-SET,https://fastly.jsdelivr.net/gh/imjasondai/surge-rules@main/rules/US.lis
 | 文件 | 策略组 | 说明 |
 |---|---|---|
 | rules/US.list | US | 需要美国出口的网站 |
-| rules/AI.list | AI Suite | 自定义 AI（M365 Copilot），排在 Microsoft 之前 |
+| rules/AI.list | AI Suite | 补充 upstream/AI-Suite 没有的 AI 网址（Grok/xAI、Poe、Sukka 独有的几条、M365 Copilot）；排在 Microsoft、AI-Suite、Proxy 之前 |
 | rules/JP.list | JP | 需要日本出口的网站 |
 | rules/Proxy-Custom.list | Proxy | 自定义代理 |
 | rules/Direct-Custom.list | DIRECT | 自定义直连、P2P 下载软件、Apple 下载 |

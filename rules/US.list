@@ -2,11 +2,8 @@
 # 用途：需要美国出口的网站（原来直接写死节点“美国 DMIT LAX HY2”）
 # 策略组：US
 # 来源：自维护
-# 整理日期：2026-10-22
-# 规则数：4
-
-# AI
-DOMAIN-SUFFIX,share-chatgpt-work.openai.chatgpt.site
+# 整理日期：2026-10-23
+# 规则数：3
 
 # 阿拉斯加航空（sc.omtrdc.net 在 AdBlock 里，这里有意放行，供登录使用）
 DOMAIN-SUFFIX,alaskaair.com

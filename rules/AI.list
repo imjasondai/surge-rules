@@ -1,9 +1,9 @@
 # AI.list
-# 用途：自定义 AI 规则；必须排在 Microsoft 规则集之前
+# 用途：补充 upstream/AI-Suite（dler-io）没有收录的 AI 网址；必须排在 Microsoft、AI-Suite、Proxy 之前
 # 策略组：AI Suite
 # 来源：自维护
-# 整理日期：2026-10-22
-# 规则数：12
+# 整理日期：2026-10-23
+# 规则数：18
 
 # Grok / xAI（2026-10-23 补全：上游 AI-Suite 只有登录网址；对照 v2fly、MetaCubeX 的 xAI 列表）
 # grok.x.com 必须在 upstream/Proxy（含 x.com）之前；X App 内的 @grok 走 x.com，无法单独分流
@@ -12,6 +12,14 @@ DOMAIN-SUFFIX,x.ai
 DOMAIN-SUFFIX,grokusercontent.com
 DOMAIN-SUFFIX,grokipedia.com
 DOMAIN,grok.x.com
+
+# 取自 Sukka ai.conf、dler-io 没有的（2026-10-23 对比；poe.com、ai.com 是 dler-io 9-27 重构时删掉的）
+DOMAIN-SUFFIX,poe.com
+DOMAIN-SUFFIX,ai.com
+DOMAIN-SUFFIX,chatgpt.site
+DOMAIN-SUFFIX,cloudcode-pa.googleapis.com
+DOMAIN,antigravity-unleash.goog
+DOMAIN-KEYWORD,openai
 
 # M365 Copilot（这些域名也在 Microsoft 里，需要优先匹配）
 DOMAIN-SUFFIX,svc.cloud.microsoft

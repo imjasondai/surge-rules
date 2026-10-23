@@ -1,7 +1,21 @@
-# AI-Suite（上游同步，请勿手改；要排除规则请写 exclude/AI-Suite.list）
+# AI-Suite（上游同步，请勿手改；要排除规则请写 exclude/AI-Suite.list，要追加规则请写 extra/AI-Suite.list）
 # 来源：https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/AI%20Suite.list
-# 同步时间：2026-10-21 23:52 UTC
-# 规则数：192（排除 0 条）
+# 同步时间：2026-10-23 05:20 UTC
+# 规则数：205（自维护 12 条 + 上游，排除 0 条）
+# —— 自维护：extra/AI-Suite.list ——
+DOMAIN-SUFFIX,grok.com
+DOMAIN-SUFFIX,x.ai
+DOMAIN-SUFFIX,grokusercontent.com
+DOMAIN-SUFFIX,grokipedia.com
+DOMAIN,grok.x.com
+DOMAIN-SUFFIX,svc.cloud.microsoft
+DOMAIN-SUFFIX,m365.cloud.microsoft
+DOMAIN,substrate.office.com
+DOMAIN,ecs.office.com
+DOMAIN,graph.microsoft.com
+DOMAIN,teams.microsoft.com
+DOMAIN-SUFFIX,trouter.skype.com
+# —— 上游 ——
 DOMAIN,apple-relay.apple.com
 DOMAIN,apple-relay.cloudflare.com
 DOMAIN,apple-relay.fastly-edge.com
@@ -175,6 +189,7 @@ DOMAIN-SUFFIX,kiro.dev
 DOMAIN,q.eu-central-1.amazonaws.com
 DOMAIN,q.us-east-1.amazonaws.com
 DOMAIN-SUFFIX,meta.ai
+DOMAIN-SUFFIX,muse.ai
 DOMAIN-SUFFIX,copilot.cloud.microsoft
 DOMAIN-SUFFIX,copilot.com
 DOMAIN-SUFFIX,copilot.microsoft.com

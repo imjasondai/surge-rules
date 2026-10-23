@@ -3,17 +3,13 @@
 # 策略组：Proxy
 # 来源：自维护
 # 整理日期：2026-10-23
-# 规则数：44
+# 规则数：42
 
 # 学术
 DOMAIN-SUFFIX,papers.ssrn.com
 
 # 运营商
 DOMAIN-SUFFIX,eas3.msg.t-mobile.com
-
-# 视频
-DOMAIN-SUFFIX,jable.tv
-DOMAIN-SUFFIX,missav.live
 
 # ==== 海外网站主站（原 Global TV 组，不再单独分组；来源：dler-io 原 Global TV 12 个规则集，去掉了 F1、已在 Proxy 里的域名和视频 CDN 节点） ====
 # ABC

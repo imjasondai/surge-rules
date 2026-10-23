@@ -14,7 +14,7 @@
 
 ## 规则文件格式
 
-- 命名：`<名称>-Custom.list` = 自己从零挑选的网址（AI-Custom、US-Custom、JP-Custom、Direct-Custom、Proxy-Custom）；按服务命名的（Netflix、Apple-AI 等）是复制后自维护的服务规则集；`upstream/` 下是上游同步的
+- 命名：`<名称>-Custom.list` = 自己从零挑选的网址（AI-Custom、US-Custom、JP-Custom、Direct-Custom、Proxy-Custom、Porn-Custom）；按服务命名的（Netflix、Apple-AI 等）是复制后自维护的服务规则集；`upstream/` 下是上游同步的
 
 - 每个文件开头保留 6 行头注释：名称、用途、策略组、来源、整理日期、规则数；改动后更新"整理日期"和"规则数"
 - 每行一条 Surge 规则，如 `DOMAIN-SUFFIX,example.com`；按主题用 `# 小标题` 分组，必要时在小标题里写清原因
@@ -28,6 +28,7 @@
 | US-Custom.list | US | — |
 | AI-Custom.list | AI Suite | **必须在 upstream/Microsoft、upstream/AI-Suite、upstream/Proxy 之前**（grok.x.com 不能被 x.com 截走） |
 | JP-Custom.list | JP | 在 AsianTV 之前 |
+| Porn-Custom.list | Proxy | — |
 | Proxy-Custom.list | Proxy | **在 AdBlock 和 Max 之后**（含原 Global TV 主站 hulu.com、bbc.co.uk、litix.io 等，与 AdBlock、Max 里的子域名重叠） |
 | Direct-Custom.list | DIRECT | **在 AdBlock 之后**（否则迅雷等广告域名会被放行；sc.omtrdc.net 的有意放行见 US-Custom.list） |
 | Nintendo.list | Switch | 在 upstream/Proxy、Domestic 之前 |

@@ -3,7 +3,7 @@
 # 策略组：JP
 # 来源：自维护
 # 整理日期：2026-10-23
-# 规则数：11
+# 规则数：7
 
 # Yahoo Japan 及相关
 DOMAIN-SUFFIX,yahoo.co.jp
@@ -15,9 +15,3 @@ DOMAIN-SUFFIX,genieedmp.com
 # TikTok
 DOMAIN-SUFFIX,tiktok.com
 DOMAIN-SUFFIX,tiktokw.us
-
-# DMM / FANZA
-DOMAIN-SUFFIX,dmm.com
-DOMAIN-SUFFIX,dmm.co.jp
-DOMAIN-SUFFIX,p-smith.com
-DOMAIN-SUFFIX,fanza.jp

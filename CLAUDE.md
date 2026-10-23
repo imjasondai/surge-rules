@@ -28,7 +28,7 @@
 | US-Custom.list | US | — |
 | AI-Custom.list | AI Suite | **必须在 upstream/Microsoft、upstream/AI-Suite、upstream/Proxy 之前**（grok.x.com 不能被 x.com 截走） |
 | JP-Custom.list | JP | 在 AsianTV 之前 |
-| Porn-Custom.list | Proxy | — |
+| Porn-Custom.list | JP | 在 AsianTV 之前（AsianTV 里也有 DMM）；DMM 必须日本 IP，所以整个规则集走 JP |
 | Proxy-Custom.list | Proxy | **在 AdBlock 和 Max 之后**（含原 Global TV 主站 hulu.com、bbc.co.uk、litix.io 等，与 AdBlock、Max 里的子域名重叠） |
 | Direct-Custom.list | DIRECT | **在 AdBlock 之后**（否则迅雷等广告域名会被放行；sc.omtrdc.net 的有意放行见 US-Custom.list） |
 | Nintendo.list | Switch | 在 upstream/Proxy、Domestic 之前 |

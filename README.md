@@ -32,7 +32,7 @@ RULE-SET,https://fastly.jsdelivr.net/gh/imjasondai/surge-rules@main/rules/US-Cus
 | rules/US-Custom.list | US | 需要美国出口的网站 |
 | rules/AI-Custom.list | AI Suite | 补充 upstream/AI-Suite 没有的 AI 网址（Grok/xAI、Poe、Sukka 独有的几条、M365 Copilot）；排在 Microsoft、AI-Suite、Proxy 之前 |
 | rules/JP-Custom.list | JP | 需要日本出口的网站 |
-| rules/Porn-Custom.list | Proxy | 成人视频网站（Jable、MissAV、Pornhub） |
+| rules/Porn-Custom.list | JP | 成人视频网站（Jable、MissAV、Pornhub、DMM/FANZA）；DMM 需要日本 IP |
 | rules/Proxy-Custom.list | Proxy | 自定义代理 + 原 Global TV 组的海外网站主站（Prime Video、BBC、Hulu、DAZN 等）；排在 AdBlock、Max 之后 |
 | rules/Direct-Custom.list | DIRECT | 自定义直连、P2P 下载软件、Apple 下载 |
 | rules/Nintendo.list | Switch | 任天堂 |

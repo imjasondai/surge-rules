@@ -26,9 +26,9 @@
 
 | 文件 | 策略组 | 顺序要求 |
 |---|---|---|
-| US-Custom.list | US | — |
+| US-Custom.list | US | **在 AdBlock 之前**（sc.omtrdc.net 在 AdBlock 里，这里有意放行供阿拉斯加航空登录） |
 | AI-Custom.list | AI Suite | **必须在 upstream/Microsoft、upstream/AI-Suite、upstream/Proxy 之前**（grok.x.com 不能被 x.com 截走） |
-| JP-Custom.list | JP | 在 AsianTV 之前 |
+| JP-Custom.list | JP | **在 AdBlock 之前**（yahoo.co.jp 包含 AdBlock 里的 Yahoo Japan 广告子域名，07 起就是放行走 JP）；在 AsianTV 之前 |
 | Porn-Custom.list | JP | 在 AsianTV 之前（AsianTV 里也有 DMM）；DMM 必须日本 IP，所以整个规则集走 JP |
 | Proxy-Custom.list | Proxy | **在 AdBlock 和 Max 之后**（含原 Global TV 主站 hulu.com、bbc.co.uk、litix.io 等，与 AdBlock、Max 里的子域名重叠） |
 | Direct-Custom.list | DIRECT | **在 AdBlock 之后**（否则迅雷等广告域名会被放行；sc.omtrdc.net 的有意放行见 US-Custom.list） |
@@ -44,23 +44,59 @@
 | Discord / GoogleFCM / PayPal / Speedtest / Steam / Telegram | 同名 | — |
 | upstream/Domestic、Domestic-IPs、China-ASN | Domestic | 靠后，在 GEOIP,CN 和 FINAL 之前 |
 
-## 配置文件中的推荐顺序（AI 与 Apple 部分，2026-10-23 评估）
+## 配置文件中的完整推荐顺序（2026-10-23）
 
-有重叠的网址谁排在前面就归谁。生成配置时按这个顺序：
+有重叠的网址谁排在前面就归谁。生成配置时按这个顺序（地址前缀 `https://testingcf.jsdelivr.net/gh/imjasondai/surge-rules@main/`）：
 
 ```
-AdBlock                        → AdBlock        与 Apple-AI 无重叠
-rules/Direct-Custom            → DIRECT         在 Apple-AI 之前：cn.ls.apple.com 等国内 Apple 地图保持直连（Apple-AI 有 ls.apple.com 后缀）
+# 本地规则（不进公开仓库）
+SRC-IP,192.168.0.109           → Switch         Switch 主机
+WOL 个人 Worker 域名           → DIRECT
+# 必须在 AdBlock 之前（有意放行的广告/统计域名）
+rules/US-Custom                → US             sc.omtrdc.net
+rules/JP-Custom                → JP             Yahoo Japan 广告子域名
+# 去广告
+upstream/AdBlock               → AdBlock
+rules/Direct-Custom            → DIRECT         在 AdBlock 之后（迅雷广告要先被拦）；在 Apple-AI 之前（国内 Apple 地图直连）
 rules/Apple-AI                 → Apple AI       在 AI-Suite、AppleNews、Apple 之前
-rules/AI-Custom                → AI Suite
-upstream/AI-Suite              → AI Suite       含 IP-CIDR，加 no-resolve；在 Microsoft、Proxy 之前
-upstream/Microsoft             → Microsoft
-…
+rules/Porn-Custom              → JP             在 AsianTV 之前（DMM）
+rules/Longbridge               → Longbridge     在 Domestic 之前
+rules/Nintendo                 → Switch         在 Proxy、Domestic 之前
+# 流媒体
+rules/Netflix                  → Netflix
+rules/DisneyPlus               → Disney Plus
+rules/YouTube                  → YouTube
+rules/Max                      → Max
+rules/Spotify                  → Spotify
+rules/AsianTV                  → Asian TV
+rules/F1                       → F1 TV
+rules/Proxy-Custom             → Proxy          在 AdBlock、Max 之后
+rules/CN-Media                 → Domestic       在 Proxy 之前
+# Apple 专用（都在 upstream/Apple 之前）
 upstream/Apple-CN              → Domestic
-rules/AppleMusic / AppleNews / AppleTV / ApplePush
+rules/AppleMusic               → Apple Music
+rules/AppleNews                → Apple TV
+rules/AppleTV                  → Apple TV
+# 应用
+rules/Discord                  → Discord
+rules/GoogleFCM                → Google FCM
+rules/AI-Custom                → AI Suite       在 Microsoft、AI-Suite、Proxy 之前
+upstream/AI-Suite              → AI Suite       含 IP-CIDR，加 no-resolve
+upstream/Microsoft             → Microsoft
+rules/PayPal                   → PayPal
+rules/Speedtest                → Speedtest
+rules/Steam                    → Steam
+rules/ApplePush                → Apple Push
 upstream/Apple                 → Apple Services 大后缀，放在所有 Apple 专用规则集之后
-…
+rules/Telegram                 → Telegram       含 IP-CIDR，加 no-resolve
+# 兜底
+upstream/Domestic              → Domestic
 upstream/Proxy                 → Proxy
+upstream/Domestic-IPs          → Domestic       no-resolve（待定：可能删，和 China-ASN、GEOIP 重复）
+upstream/China-ASN             → Domestic       no-resolve
+RULE-SET,LAN                   → DIRECT
+GEOIP,CN                       → Domestic
+FINAL                          → Direct,dns-failed
 ```
 
 与 07 版的差别：07 把 Apple-AI 放在最前面，导致国内 Apple 地图（cn.ls.apple.com 等）走了 Apple AI 组；改为在 Direct-Custom 之后，只有这 3 个网址改为直连，其余不变。

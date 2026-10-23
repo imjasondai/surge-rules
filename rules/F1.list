@@ -1,6 +1,9 @@
-# F1.list — F1 TV App（F1 官方 App，Apple TV / iPhone / Mac 通用）
-# 来源：dler-io F1 TV.list（2026-10-21）整理；策略组：F1 TV（美区账号 → 美国出口，默认 DMIT LAX）
-# 维护：看比赛时在 Surge「最近请求」里按 Apple TV 的 IP 筛选，把新出现的 F1 域名补进来
+# F1.list
+# 用途：F1 TV App（F1 官方 App，Apple TV / iPhone / Mac 通用）；维护：看比赛时在 Surge「最近请求」里按 Apple TV 的 IP 筛选，把新出现的 F1 域名补进来
+# 策略组：F1 TV（美区账号 → 美国出口，默认 DMIT LAX）
+# 来源：dler-io F1 TV.list（2026-10-21）整理后自维护
+# 整理日期：2026-10-23
+# 规则数：7
 
 # 账号、接口、目录、网页（包含 f1tv.formula1.com 等所有子域名）
 DOMAIN-SUFFIX,formula1.com

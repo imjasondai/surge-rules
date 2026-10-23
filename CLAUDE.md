@@ -24,7 +24,7 @@
 | 文件 | 策略组 | 顺序要求 |
 |---|---|---|
 | US.list | US | — |
-| AI.list | AI Suite | **必须在 upstream/Microsoft、upstream/AI-Suite 之前** |
+| AI.list | AI Suite | **必须在 upstream/Microsoft、upstream/AI-Suite、upstream/Proxy 之前**（grok.x.com 不能被 x.com 截走） |
 | JP.list | JP | 在 AsianTV 之前 |
 | Proxy-Custom.list | Proxy | — |
 | GlobalMedia.list | Proxy | 原 Global TV 主站，保持走代理（待并入 Proxy-Custom） |

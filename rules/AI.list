@@ -3,7 +3,15 @@
 # 策略组：AI Suite
 # 来源：自维护
 # 整理日期：2026-10-22
-# 规则数：7
+# 规则数：12
+
+# Grok / xAI（2026-10-23 补全：上游 AI-Suite 只有登录网址；对照 v2fly、MetaCubeX 的 xAI 列表）
+# grok.x.com 必须在 upstream/Proxy（含 x.com）之前；X App 内的 @grok 走 x.com，无法单独分流
+DOMAIN-SUFFIX,grok.com
+DOMAIN-SUFFIX,x.ai
+DOMAIN-SUFFIX,grokusercontent.com
+DOMAIN-SUFFIX,grokipedia.com
+DOMAIN,grok.x.com
 
 # M365 Copilot（这些域名也在 Microsoft 里，需要优先匹配）
 DOMAIN-SUFFIX,svc.cloud.microsoft

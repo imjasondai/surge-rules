@@ -81,23 +81,25 @@ rules/AppleTV                  → Apple TV
 rules/Discord                  → Discord
 rules/GoogleFCM                → Google FCM
 rules/AI-Custom                → AI Suite       在 Microsoft、AI-Suite、Proxy 之前
-upstream/AI-Suite              → AI Suite       含 IP-CIDR，加 no-resolve
+upstream/AI-Suite              → AI Suite
 upstream/Microsoft             → Microsoft
 rules/PayPal                   → PayPal
 rules/Speedtest                → Speedtest
 rules/Steam                    → Steam
 rules/ApplePush                → Apple Push
 upstream/Apple                 → Apple Services 大后缀，放在所有 Apple 专用规则集之后
-rules/Telegram                 → Telegram       含 IP-CIDR，加 no-resolve
+rules/Telegram                 → Telegram
 # 兜底
 upstream/Domestic              → Domestic
 upstream/Proxy                 → Proxy
-upstream/Domestic-IPs          → Domestic       no-resolve（待定：可能删，和 China-ASN、GEOIP 重复）
-upstream/China-ASN             → Domestic       no-resolve
+upstream/Domestic-IPs          → Domestic       待定：可能删，和 China-ASN、GEOIP 重复
+upstream/China-ASN             → Domestic
 RULE-SET,LAN                   → DIRECT
 GEOIP,CN                       → Domestic
 FINAL                          → Direct,dns-failed
 ```
+
+含 IP 规则的规则集（ApplePush、AsianTV、Direct-Custom、GoogleFCM、Telegram、AdBlock、AI-Suite、Apple、Domestic、Proxy、China-ASN、Domestic-IPs）：是否加 `no-resolve` 沿用 07 的写法，不要顺手改（加了会让这些 IP 规则只匹配直接用 IP 的连接）。
 
 与 07 版的差别：07 把 Apple-AI 放在最前面，导致国内 Apple 地图（cn.ls.apple.com 等）走了 Apple AI 组；改为在 Direct-Custom 之后，只有这 3 个网址改为直连，其余不变。
 

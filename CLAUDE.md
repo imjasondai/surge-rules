@@ -29,7 +29,7 @@
 | US-Custom.list | US | **在 AdBlock 之前**（sc.omtrdc.net 在 AdBlock 里，这里有意放行供阿拉斯加航空登录） |
 | AI-Custom.list | AI Suite | **必须在 upstream/Microsoft、upstream/AI-Suite、upstream/Proxy 之前**（grok.x.com 不能被 x.com 截走） |
 | JP-Custom.list | JP | **在 AdBlock 之前**（yahoo.co.jp 包含 AdBlock 里的 Yahoo Japan 广告子域名，07 起就是放行走 JP）；在 AsianTV 之前（DMM 也在 AsianTV 里） |
-| Porn-Custom.list | Proxy | — （与其他规则集无重叠，位置不限） |
+| Porn-Custom.list | JP | — （与其他规则集无重叠，位置不限） |
 | Proxy-Custom.list | Proxy | **在 AdBlock 和 Max 之后**（含原 Global TV 主站 hulu.com、bbc.co.uk、litix.io 等，与 AdBlock、Max 里的子域名重叠） |
 | Direct-Custom.list | DIRECT | **在 AdBlock 之后**（否则迅雷等广告域名会被放行；sc.omtrdc.net 的有意放行见 US-Custom.list） |
 | Nintendo.list | Switch | 在 upstream/Proxy、Domestic 之前 |
@@ -70,7 +70,7 @@ rules/Spotify                  → Spotify
 rules/AsianTV                  → Asian TV
 rules/F1                       → F1 TV
 rules/Proxy-Custom             → Proxy          在 AdBlock、Max 之后
-rules/Porn-Custom              → Proxy          位置不限
+rules/Porn-Custom              → JP             位置不限
 rules/CN-Media                 → Domestic       在 Proxy 之前
 # Apple 专用（都在 upstream/Apple 之前）
 upstream/Apple-CN              → Domestic

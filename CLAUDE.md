@@ -10,7 +10,6 @@
 
 - `rules/`：自维护规则集，**可以直接改**
 - `upstream/`：GitHub Actions 每天从 `sources.json` 同步，**不要手改**；要去掉某条上游规则，写进 `exclude/<同名>.list`
-- `extra/`：要追加到某个上游规则集的自维护规则，写进 `extra/<同名>.list`，同步时合并到 `upstream/<同名>.list` 最前面（同一个策略组只引用一个文件）；改完本地运行 `python3 scripts/sync.py <名称>` 重新生成并一起提交
 - `scripts/sync.py`：同步脚本，本地可运行 `python3 scripts/sync.py` 验证
 
 ## 规则文件格式
@@ -25,7 +24,7 @@
 | 文件 | 策略组 | 顺序要求 |
 |---|---|---|
 | US.list | US | — |
-| upstream/AI-Suite（含 extra/AI-Suite.list） | AI Suite | **必须在 upstream/Microsoft、upstream/Proxy 之前**（M365 Copilot 不能被 Microsoft 截走，grok.x.com 不能被 x.com 截走） |
+| AI.list | AI Suite | **必须在 upstream/Microsoft、upstream/AI-Suite、upstream/Proxy 之前**（grok.x.com 不能被 x.com 截走） |
 | JP.list | JP | 在 AsianTV 之前 |
 | Proxy-Custom.list | Proxy | — |
 | GlobalMedia.list | Proxy | 原 Global TV 主站，保持走代理（待并入 Proxy-Custom） |

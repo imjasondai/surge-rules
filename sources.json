@@ -1,5 +1,5 @@
 {
-  "_说明": "上游规则集来源。scripts/sync.py 每天把它们同步到 upstream/，请勿手改 upstream/ 下的文件；要去掉某条上游规则，写进 exclude/<名称>.list；要追加规则，写进 extra/<名称>.list",
+  "_说明": "上游规则集来源。scripts/sync.py 每天把它们同步到 upstream/，请勿手改 upstream/ 下的文件；要去掉某条上游规则，写进 exclude/<名称>.list",
   "AdBlock": "https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/AdBlock.list",
   "Domestic": "https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/Domestic.list",
   "Proxy": "https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/Proxy.list",

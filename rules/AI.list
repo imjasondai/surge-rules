@@ -1,8 +1,8 @@
-# extra/AI-Suite.list
-# 用途：追加到 upstream/AI-Suite.list 最前面的自维护 AI 规则（sync.py 合并，生成的文件在 upstream/）
+# AI.list
+# 用途：自定义 AI 规则；必须排在 Microsoft 规则集之前
 # 策略组：AI Suite
 # 来源：自维护
-# 整理日期：2026-10-23
+# 整理日期：2026-10-22
 # 规则数：12
 
 # Grok / xAI（2026-10-23 补全：上游 AI-Suite 只有登录网址；对照 v2fly、MetaCubeX 的 xAI 列表）

@@ -6,7 +6,7 @@ on:
   workflow_dispatch:         # 也可以在 GitHub 网页上手动运行
   push:
     branches: [main]
-    paths: ["rules/**", "exclude/**", "extra/**", "sources.json"]
+    paths: ["rules/**", "exclude/**", "sources.json"]
 
 permissions:
   contents: write
@@ -39,7 +39,7 @@ jobs:
           # 本次同步变化的上游文件 + 本次 push 修改的自维护规则
           files=$(cat changed.txt)
           if [ "${{ github.event_name }}" = "push" ]; then
-            files="$files $(git diff --name-only HEAD~1 HEAD -- rules/ upstream/ || true)"
+            files="$files $(git diff --name-only HEAD~1 HEAD -- rules/ || true)"
           fi
           for f in $files; do
             url="https://purge.jsdelivr.net/gh/${{ github.repository }}@main/$f"

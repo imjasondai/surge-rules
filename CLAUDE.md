@@ -28,8 +28,8 @@
 |---|---|---|
 | US-Custom.list | US | **在 AdBlock 之前**（sc.omtrdc.net 在 AdBlock 里，这里有意放行供阿拉斯加航空登录） |
 | AI-Custom.list | AI Suite | **必须在 upstream/Microsoft、upstream/AI-Suite、upstream/Proxy 之前**（grok.x.com 不能被 x.com 截走） |
-| JP-Custom.list | JP | **在 AdBlock 之前**（yahoo.co.jp 包含 AdBlock 里的 Yahoo Japan 广告子域名，07 起就是放行走 JP）；在 AsianTV 之前 |
-| Porn-Custom.list | JP | 在 AsianTV 之前（AsianTV 里也有 DMM）；DMM 必须日本 IP，所以整个规则集走 JP |
+| JP-Custom.list | JP | **在 AdBlock 之前**（yahoo.co.jp 包含 AdBlock 里的 Yahoo Japan 广告子域名，07 起就是放行走 JP）；在 AsianTV 之前（DMM 也在 AsianTV 里） |
+| Porn-Custom.list | Proxy | — （与其他规则集无重叠，位置不限） |
 | Proxy-Custom.list | Proxy | **在 AdBlock 和 Max 之后**（含原 Global TV 主站 hulu.com、bbc.co.uk、litix.io 等，与 AdBlock、Max 里的子域名重叠） |
 | Direct-Custom.list | DIRECT | **在 AdBlock 之后**（否则迅雷等广告域名会被放行；sc.omtrdc.net 的有意放行见 US-Custom.list） |
 | Nintendo.list | Switch | 在 upstream/Proxy、Domestic 之前 |
@@ -54,12 +54,11 @@ SRC-IP,192.168.0.109           → Switch         Switch 主机
 WOL 个人 Worker 域名           → DIRECT
 # 必须在 AdBlock 之前（有意放行的广告/统计域名）
 rules/US-Custom                → US             sc.omtrdc.net
-rules/JP-Custom                → JP             Yahoo Japan 广告子域名
+rules/JP-Custom                → JP             Yahoo Japan 广告子域名；含 DMM/FANZA（须在 AsianTV 之前，已满足）
 # 去广告
 upstream/AdBlock               → AdBlock
 rules/Direct-Custom            → DIRECT         在 AdBlock 之后（迅雷广告要先被拦）；在 Apple-AI 之前（国内 Apple 地图直连）
 rules/Apple-AI                 → Apple AI       在 AI-Suite、AppleNews、Apple 之前
-rules/Porn-Custom              → JP             在 AsianTV 之前（DMM）
 rules/Longbridge               → Longbridge     在 Domestic 之前
 rules/Nintendo                 → Switch         在 Proxy、Domestic 之前
 # 流媒体
@@ -71,6 +70,7 @@ rules/Spotify                  → Spotify
 rules/AsianTV                  → Asian TV
 rules/F1                       → F1 TV
 rules/Proxy-Custom             → Proxy          在 AdBlock、Max 之后
+rules/Porn-Custom              → Proxy          位置不限
 rules/CN-Media                 → Domestic       在 Proxy 之前
 # Apple 专用（都在 upstream/Apple 之前）
 upstream/Apple-CN              → Domestic

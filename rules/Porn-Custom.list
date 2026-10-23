@@ -1,9 +1,9 @@
 # Porn-Custom.list
-# 用途：成人视频网站（2026-10-23 从 Proxy-Custom、JP-Custom 分出）；DMM 必须用日本 IP，所以整个规则集走 JP；须排在 AsianTV 之前（AsianTV 里也有 DMM）
-# 策略组：JP
+# 用途：成人视频网站（2026-10-23 从 Proxy-Custom 分出）；与其他规则集无重叠，位置不限。DMM/FANZA 需要日本 IP，放在 JP-Custom
+# 策略组：Proxy
 # 来源：自维护
 # 整理日期：2026-10-23
-# 规则数：10
+# 规则数：6
 
 # Jable、MissAV
 DOMAIN-SUFFIX,jable.tv
@@ -14,9 +14,3 @@ DOMAIN-SUFFIX,phncdn.com
 DOMAIN-SUFFIX,phprcdn.com
 DOMAIN-SUFFIX,pornhub.com
 DOMAIN-SUFFIX,pornhubpremium.com
-
-# DMM / FANZA（必须日本 IP）
-DOMAIN-SUFFIX,dmm.com
-DOMAIN-SUFFIX,dmm.co.jp
-DOMAIN-SUFFIX,p-smith.com
-DOMAIN-SUFFIX,fanza.jp

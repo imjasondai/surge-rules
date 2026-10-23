@@ -1,7 +1,7 @@
 # AI-Suite（上游同步，请勿手改；要排除规则请写 exclude/AI-Suite.list）
 # 来源：https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/AI%20Suite.list
-# 同步时间：2026-10-22 22:49 UTC
-# 规则数：193（排除 0 条）
+# 同步时间：2026-10-23 11:01 UTC
+# 规则数：192（排除 0 条）
 DOMAIN,apple-relay.apple.com
 DOMAIN,apple-relay.cloudflare.com
 DOMAIN,apple-relay.fastly-edge.com
@@ -76,11 +76,6 @@ DOMAIN-SUFFIX,cursor.sh
 DOMAIN-SUFFIX,cursorapi.com
 DOMAIN-SUFFIX,cursorvm.com
 DOMAIN,accounts.spacex.ai
-DOMAIN,accounts.x.ai
-DOMAIN,auth.grok.com
-DOMAIN,auth.grokipedia.com
-DOMAIN,auth.grokusercontent.com
-DOMAIN,auth.x.ai
 DOMAIN-SUFFIX,diabrowser.com
 DOMAIN-SUFFIX,diabrowser.engineering
 DOMAIN-SUFFIX,dify.ai
@@ -195,3 +190,7 @@ DOMAIN-SUFFIX,codeium.com
 DOMAIN-SUFFIX,codeiumdata.com
 DOMAIN-SUFFIX,windsurf.com
 DOMAIN-SUFFIX,zed.dev
+DOMAIN-SUFFIX,grok.com
+DOMAIN-SUFFIX,grokipedia.com
+DOMAIN-SUFFIX,grokusercontent.com
+DOMAIN-SUFFIX,x.ai

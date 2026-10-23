@@ -2,8 +2,8 @@
 # 用途：Disney+
 # 策略组：Disney Plus
 # 来源：dler-io/Rules（复制后自维护）
-# 整理日期：2026-10-22
-# 规则数：9
+# 整理日期：2026-10-23
+# 规则数：8
 
 # Disney+
 DOMAIN-SUFFIX,cdn.registerdisney.go.com
@@ -14,4 +14,3 @@ DOMAIN-SUFFIX,disneynow.com
 DOMAIN-SUFFIX,disneyplus.com
 DOMAIN-SUFFIX,disneystreaming.com
 DOMAIN-SUFFIX,dssott.com
-USER-AGENT,Disney*

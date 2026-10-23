@@ -2,8 +2,8 @@
 # 用途：国内流媒体，显式直连，防止误走代理
 # 策略组：Domestic
 # 来源：dler-io/Rules（复制后自维护）
-# 整理日期：2026-10-22
-# 规则数：59
+# 整理日期：2026-10-23
+# 规则数：39
 
 # 哔哩哔哩
 DOMAIN-SUFFIX,acg.tv
@@ -16,64 +16,40 @@ DOMAIN-SUFFIX,bilibili.tv
 DOMAIN-SUFFIX,bilivideo.com
 DOMAIN-SUFFIX,hdslb.com
 DOMAIN,upos-hz-mirrorakam.akamaized.net
-USER-AGENT,bili*
-USER-AGENT,bili-inter*
 
 # 爱奇艺
 DOMAIN-SUFFIX,71.am
 DOMAIN-SUFFIX,71.am.com
 DOMAIN-SUFFIX,71edge.com
 DOMAIN-SUFFIX,71edge.net
-DOMAIN-SUFFIX,aianno.cn
 DOMAIN-SUFFIX,aianno.com
 DOMAIN-SUFFIX,aiqiyicloud-mgmt.com
 DOMAIN-SUFFIX,aiqiyicloud.com
 DOMAIN-SUFFIX,aiqiyicloud.net
 DOMAIN-SUFFIX,baiying.com
-DOMAIN-SUFFIX,gitv.cn
 DOMAIN-SUFFIX,gitv.tv
 DOMAIN-SUFFIX,ibkstore.com
-DOMAIN-SUFFIX,iq.com
 DOMAIN-SUFFIX,iqiyi.com
 DOMAIN-SUFFIX,iqiyi.demo.uwp
 DOMAIN-SUFFIX,iqiyiedge.com
 DOMAIN-SUFFIX,iqiyiedge.net
 DOMAIN-SUFFIX,iqiyipic.com
-DOMAIN-SUFFIX,jiangbing.cn
 DOMAIN-SUFFIX,pps.tv
 DOMAIN-SUFFIX,ppsimg.com
-DOMAIN-SUFFIX,ppstream.cn
 DOMAIN-SUFFIX,ppstream.com
-DOMAIN-SUFFIX,ppstream.com.cn
 DOMAIN-SUFFIX,ppstream.net
-DOMAIN-SUFFIX,ppstream.net.cn
 DOMAIN-SUFFIX,ppsurl.com
-DOMAIN-SUFFIX,qiyi.cn
 DOMAIN-SUFFIX,qiyi.com
 DOMAIN-SUFFIX,qiyipic.com
 DOMAIN-SUFFIX,qy.com
 DOMAIN-SUFFIX,qy.net
-DOMAIN-SUFFIX,suike.cn
-USER-AGENT,*QIYI*
-USER-AGENT,iQiYi*
-
-# 乐视
-DOMAIN-SUFFIX,api.mob.app.letv.com
-
-# 网易云音乐
-DOMAIN-SUFFIX,music.126.net
-DOMAIN-SUFFIX,music.163.com
 
 # 腾讯视频
 DOMAIN-SUFFIX,v.smtcdns.com
-DOMAIN-SUFFIX,vv.video.qq.com
 
 # 优酷
-DOMAIN-SUFFIX,soku.com
-DOMAIN-SUFFIX,ykimg.com
 DOMAIN-SUFFIX,youku.com
 
 # WeTV
 DOMAIN-SUFFIX,wetv.vip
 DOMAIN-SUFFIX,wetvinfo.com
-USER-AGENT,WeTV*

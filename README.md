@@ -43,10 +43,11 @@ RULE-SET,https://testingcf.jsdelivr.net/gh/imjasondai/surge-rules@main/rules/US-
 | rules/AsianTV.list | Asian TV | 亚洲流媒体 |
 | rules/CN-Media.list | Domestic | 国内流媒体，显式直连 |
 | rules/AppleMusic.list、ApplePush.list、Apple-AI.list | 同名 | Apple 服务 |
-| rules/Discord、GoogleFCM、PayPal、Speedtest、Steam、Telegram | 同名 | 应用 |
+| rules/GoogleFCM、Telegram | 同名 | 应用 |
+| rules/Discord、PayPal、Speedtest、Steam | Proxy | 应用（不再单独分组） |
 | upstream/AdBlock | AdBlock | 去广告（dler-io） |
 | upstream/AI-Suite、Microsoft、Apple、Apple-CN | 同名 | dler-io / Sukka |
 | upstream/Domestic、Proxy | Domestic / Proxy | dler-io |
-| upstream/Domestic-IPs、China-ASN | Domestic | 中国 IP / ASN |
+| upstream/China-ASN | Domestic | 中国 IP（按 ASN）；Domestic-IPs 已于 2026-10-23 删除（与 China-ASN、GEOIP,CN 重复） |
 
 上游来源：[dler-io/Rules](https://github.com/dler-io/Rules)、[SukkaW/Surge](https://github.com/SukkaW/Surge)、[VirgilClyne/GetSomeFries](https://github.com/VirgilClyne/GetSomeFries)、[ryanbuu/surge-rules](https://github.com/ryanbuu/surge-rules)。

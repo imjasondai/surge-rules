@@ -41,8 +41,9 @@
 | CN-Media.list | Domestic | 在 upstream/Proxy 之前 |
 | Apple-AI.list | Apple AI（建议选美国） | **在 Direct-Custom 之后、upstream/AI-Suite 之前**（apple-relay、cp4、gspe1-ssl 与 AI-Suite 重叠，要归 Apple AI）；也在 AppleNews、upstream/Apple 之前 |
 | AppleMusic / ApplePush | 同名 | 在 upstream/Apple 之前 |
-| Discord / GoogleFCM / PayPal / Speedtest / Steam / Telegram | 同名 | — |
-| upstream/Domestic、Domestic-IPs、China-ASN | Domestic | 靠后，在 GEOIP,CN 和 FINAL 之前 |
+| GoogleFCM / Telegram | 同名 | — |
+| Discord / PayPal / Speedtest / Steam | **Proxy**（2026-10-23 起不再单独分组） | — |
+| upstream/Domestic、China-ASN | Domestic | 靠后，在 GEOIP,CN 和 FINAL 之前 |
 
 ## 配置文件中的完整推荐顺序（2026-10-23）
 
@@ -78,28 +79,27 @@ rules/AppleMusic               → Apple Music
 rules/AppleNews                → Apple TV
 rules/AppleTV                  → Apple TV
 # 应用
-rules/Discord                  → Discord
+rules/Discord                  → Proxy
 rules/GoogleFCM                → Google FCM
 rules/AI-Custom                → AI Suite       在 Microsoft、AI-Suite、Proxy 之前
 upstream/AI-Suite              → AI Suite
 upstream/Microsoft             → Microsoft
-rules/PayPal                   → PayPal
-rules/Speedtest                → Speedtest
-rules/Steam                    → Steam
+rules/PayPal                   → Proxy
+rules/Speedtest                → Proxy
+rules/Steam                    → Proxy
 rules/ApplePush                → Apple Push
 upstream/Apple                 → Apple Services 大后缀，放在所有 Apple 专用规则集之后
 rules/Telegram                 → Telegram
 # 兜底
 upstream/Domestic              → Domestic
 upstream/Proxy                 → Proxy
-upstream/Domestic-IPs          → Domestic       待定：可能删，和 China-ASN、GEOIP 重复
 upstream/China-ASN             → Domestic
 RULE-SET,LAN                   → DIRECT
 GEOIP,CN                       → Domestic
 FINAL                          → Direct,dns-failed
 ```
 
-含 IP 规则的规则集（ApplePush、AsianTV、Direct-Custom、GoogleFCM、Telegram、AdBlock、AI-Suite、Apple、Domestic、Proxy、China-ASN、Domestic-IPs）：是否加 `no-resolve` 沿用 07 的写法，不要顺手改（加了会让这些 IP 规则只匹配直接用 IP 的连接）。
+07 的 RULE-SET 行都没有加 `no-resolve`（域名类规则集加 `extended-matching`），08 沿用，不要顺手改。
 
 与 07 版的差别：07 把 Apple-AI 放在最前面，导致国内 Apple 地图（cn.ls.apple.com 等）走了 Apple AI 组；改为在 Direct-Custom 之后，只有这 3 个网址改为直连，其余不变。
 

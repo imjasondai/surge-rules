@@ -3,10 +3,8 @@
 # 策略组：Apple TV
 # 来源：dler-io/Rules（复制后自维护）
 # 整理日期：2026-10-23
-# 规则数：4
+# 规则数：2
 
 # Apple News
 DOMAIN-SUFFIX,apple.comscoreresearch.com
 DOMAIN-SUFFIX,apple.news
-USER-AGENT,AppleNews*
-USER-AGENT,com.apple.news*

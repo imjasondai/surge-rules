@@ -2,8 +2,8 @@
 # 用途：Spotify
 # 策略组：Spotify
 # 来源：dler-io/Rules（复制后自维护）
-# 整理日期：2026-10-22
-# 规则数：27
+# 整理日期：2026-10-23
+# 规则数：26
 
 # Spotify
 DOMAIN,audio-ak-spotify-com.akamaized.net
@@ -32,4 +32,3 @@ DOMAIN-SUFFIX,spotifyforvendors.com
 DOMAIN-SUFFIX,spotifyjobs.com
 DOMAIN-SUFFIX,spotilocal.com
 DOMAIN-SUFFIX,tospotify.com
-USER-AGENT,Spotify*

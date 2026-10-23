@@ -2,10 +2,9 @@
 # 用途：PayPal
 # 策略组：PayPal
 # 来源：dler-io/Rules（复制后自维护）
-# 整理日期：2026-10-22
-# 规则数：3
+# 整理日期：2026-10-23
+# 规则数：2
 
 # PayPal
 DOMAIN-SUFFIX,paypal.com
 DOMAIN-SUFFIX,paypalobjects.com
-USER-AGENT,PayPal*

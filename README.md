@@ -6,7 +6,7 @@
 
 | 目录 | 内容 | 能不能手改 |
 |---|---|---|
-| `rules/` | 自维护规则集：自定义规则、流媒体、Apple、应用 | ✅ 直接改 |
+| `rules/` | 自维护规则集：`*-Custom.list` 是自己挑选的网址，其余是按服务命名的流媒体、Apple、应用规则 | ✅ 直接改 |
 | `upstream/` | 每天从上游自动同步的大列表（去广告、国内、代理、Microsoft、AI、中国 IP 等） | ❌ 不要手改，会被覆盖 |
 | `exclude/` | 要从某个上游列表里去掉的规则，文件名与 `upstream/` 对应 | ✅ |
 | `sources.json` | 上游来源网址 | ✅ |
@@ -14,7 +14,7 @@
 ## 在 Surge 中引用
 
 ```
-RULE-SET,https://fastly.jsdelivr.net/gh/imjasondai/surge-rules@main/rules/US.list,US,extended-matching
+RULE-SET,https://fastly.jsdelivr.net/gh/imjasondai/surge-rules@main/rules/US-Custom.list,US,extended-matching
 ```
 
 用 jsDelivr 是因为国内能直接访问。它有缓存，推送后 GitHub Actions 会自动刷新改动文件的缓存；刷新失败时最多 12 小时后生效。
@@ -29,9 +29,9 @@ RULE-SET,https://fastly.jsdelivr.net/gh/imjasondai/surge-rules@main/rules/US.lis
 
 | 文件 | 策略组 | 说明 |
 |---|---|---|
-| rules/US.list | US | 需要美国出口的网站 |
-| rules/AI.list | AI Suite | 补充 upstream/AI-Suite 没有的 AI 网址（Grok/xAI、Poe、Sukka 独有的几条、M365 Copilot）；排在 Microsoft、AI-Suite、Proxy 之前 |
-| rules/JP.list | JP | 需要日本出口的网站 |
+| rules/US-Custom.list | US | 需要美国出口的网站 |
+| rules/AI-Custom.list | AI Suite | 补充 upstream/AI-Suite 没有的 AI 网址（Grok/xAI、Poe、Sukka 独有的几条、M365 Copilot）；排在 Microsoft、AI-Suite、Proxy 之前 |
+| rules/JP-Custom.list | JP | 需要日本出口的网站 |
 | rules/Proxy-Custom.list | Proxy | 自定义代理 |
 | rules/Direct-Custom.list | DIRECT | 自定义直连、P2P 下载软件、Apple 下载 |
 | rules/Nintendo.list | Switch | 任天堂 |

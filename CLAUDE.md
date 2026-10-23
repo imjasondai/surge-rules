@@ -14,6 +14,8 @@
 
 ## 规则文件格式
 
+- 命名：`<名称>-Custom.list` = 自己从零挑选的网址（AI-Custom、US-Custom、JP-Custom、Direct-Custom、Proxy-Custom）；按服务命名的（Netflix、Apple-AI 等）是复制后自维护的服务规则集；`upstream/` 下是上游同步的
+
 - 每个文件开头保留 6 行头注释：名称、用途、策略组、来源、整理日期、规则数；改动后更新"整理日期"和"规则数"
 - 每行一条 Surge 规则，如 `DOMAIN-SUFFIX,example.com`；按主题用 `# 小标题` 分组，必要时在小标题里写清原因
 - 不写策略名（策略在配置文件的 RULE-SET 行指定）；同一文件内不重复
@@ -23,12 +25,12 @@
 
 | 文件 | 策略组 | 顺序要求 |
 |---|---|---|
-| US.list | US | — |
-| AI.list | AI Suite | **必须在 upstream/Microsoft、upstream/AI-Suite、upstream/Proxy 之前**（grok.x.com 不能被 x.com 截走） |
-| JP.list | JP | 在 AsianTV 之前 |
+| US-Custom.list | US | — |
+| AI-Custom.list | AI Suite | **必须在 upstream/Microsoft、upstream/AI-Suite、upstream/Proxy 之前**（grok.x.com 不能被 x.com 截走） |
+| JP-Custom.list | JP | 在 AsianTV 之前 |
 | Proxy-Custom.list | Proxy | — |
 | GlobalMedia.list | Proxy | 原 Global TV 主站，保持走代理（待并入 Proxy-Custom） |
-| Direct-Custom.list | DIRECT | **在 AdBlock 之后**（否则迅雷等广告域名会被放行；sc.omtrdc.net 的有意放行见 US.list） |
+| Direct-Custom.list | DIRECT | **在 AdBlock 之后**（否则迅雷等广告域名会被放行；sc.omtrdc.net 的有意放行见 US-Custom.list） |
 | Nintendo.list | Switch | 在 upstream/Proxy、Domestic 之前 |
 | Longbridge.list | Longbridge | 在 Domestic 之前 |
 | F1.list | F1 TV（美国出口） | — |
@@ -49,7 +51,7 @@
 AdBlock                        → AdBlock        与 Apple-AI 无重叠
 rules/Direct-Custom            → DIRECT         在 Apple-AI 之前：cn.ls.apple.com 等国内 Apple 地图保持直连（Apple-AI 有 ls.apple.com 后缀）
 rules/Apple-AI                 → Apple AI       在 AI-Suite、AppleNews、Apple 之前
-rules/AI                       → AI Suite
+rules/AI-Custom                → AI Suite
 upstream/AI-Suite              → AI Suite       含 IP-CIDR，加 no-resolve；在 Microsoft、Proxy 之前
 upstream/Microsoft             → Microsoft
 …

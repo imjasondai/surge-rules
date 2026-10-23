@@ -14,10 +14,10 @@
 ## 在 Surge 中引用
 
 ```
-RULE-SET,https://fastly.jsdelivr.net/gh/imjasondai/surge-rules@main/rules/US-Custom.list,US,extended-matching
+RULE-SET,https://testingcf.jsdelivr.net/gh/imjasondai/surge-rules@main/rules/US-Custom.list,US,extended-matching
 ```
 
-用 jsDelivr 是因为国内能直接访问。它有缓存，推送后 GitHub Actions 会自动刷新改动文件的缓存；刷新失败时最多 12 小时后生效。
+用 jsDelivr 是因为国内能直接访问；用 `testingcf` 子域名是为了固定走 Cloudflare——推送后 GitHub Actions 刷新缓存对 Cloudflare 有效，对 `fastly.jsdelivr.net`（Fastly）的部分节点无效，后者可能要等最多 12 小时。
 
 ## 日常维护
 

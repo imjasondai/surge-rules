@@ -6,7 +6,7 @@ on:
   workflow_dispatch:         # 也可以在 GitHub 网页上手动运行
   push:
     branches: [main]
-    paths: ["rules/**", "exclude/**", "sources.json"]
+    paths: ["rules/**", "exclude/**", "sources.json", ".github/workflows/sync.yml"]
 
 permissions:
   contents: write
@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 2
+          fetch-depth: 0   # 需要完整历史，才能比较整次推送的范围
 
       - name: 同步上游
         run: python3 scripts/sync.py
@@ -39,9 +39,15 @@ jobs:
           # 本次同步变化的上游文件 + 本次 push 修改的自维护规则
           files=$(cat changed.txt)
           if [ "${{ github.event_name }}" = "push" ]; then
-            files="$files $(git diff --name-only HEAD~1 HEAD -- rules/ || true)"
+            # 整次推送的范围（before → 推送后的提交），多个提交或合并提交也不会漏
+            before="${{ github.event.before }}"
+            if [ -z "$before" ] || [ "$before" = "0000000000000000000000000000000000000000" ]; then
+              files="$files $(git ls-files rules/ upstream/)"   # 新分支：全部刷新
+            else
+              files="$files $(git diff --name-only "$before" "${{ github.sha }}" -- rules/ upstream/ || true)"
+            fi
           fi
-          for f in $files; do
+          for f in $(printf "%s\n" $files | sort -u); do
             url="https://purge.jsdelivr.net/gh/${{ github.repository }}@main/$f"
             echo "purge $url"
             curl -fsS "$url" > /dev/null || echo "purge 失败（不影响规则，缓存最多 12 小时后自动更新）"

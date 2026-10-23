@@ -17,7 +17,7 @@
 RULE-SET,https://testingcf.jsdelivr.net/gh/imjasondai/surge-rules@main/rules/US-Custom.list,US,extended-matching
 ```
 
-用 jsDelivr 是因为国内能直接访问；用 `testingcf` 子域名是为了固定走 Cloudflare——推送后 GitHub Actions 刷新缓存对 Cloudflare 有效，对 `fastly.jsdelivr.net`（Fastly）的部分节点无效，后者可能要等最多 12 小时。
+用 jsDelivr 是因为国内能直接访问。推送后 GitHub Actions 会请求刷新缓存，但实测部分 CDN 节点仍可能给旧版本，**改动最多 12 小时后才保证生效**。
 
 ## 日常维护
 

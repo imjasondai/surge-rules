@@ -3,7 +3,7 @@
 用户自维护的 Surge 规则集，公开仓库 https://github.com/imjasondai/surge-rules。
 被 iCloud 里的 Surge 配置（Mac mini 透明网关 + iPhone 共用）通过 jsDelivr 引用：
 `https://testingcf.jsdelivr.net/gh/imjasondai/surge-rules@main/<路径>`
-（用 testingcf = 固定走 Cloudflare：jsDelivr 清缓存对 Cloudflare 有效，对 Fastly 的东京节点无效，fastly.jsdelivr.net 改完可能要等 12 小时；2026-10-23 实测）
+（2026-10-23 实测：推送后 Actions 会请求 jsDelivr 清缓存，但 Cloudflare、Fastly 各节点都可能继续给旧版本，**最多 12 小时**（s-maxage=43200）后才全部更新；换哪个 jsDelivr 子域名都一样。核对改动以 GitHub 原始文件为准，不要以 CDN 为准）
 
 本仓库位于 `Home Network/repos/` 下，上层 `Home Network/CLAUDE.md` 的家庭网络约定同样适用（设备、拓扑、变更记录都在上层）。
 

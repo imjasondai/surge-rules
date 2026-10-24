@@ -1,7 +1,7 @@
 # AdBlock（上游同步，请勿手改；要排除规则请写 exclude/AdBlock.list）
 # 来源：https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/AdBlock.list
-# 同步时间：2026-10-21 23:52 UTC
-# 规则数：7255（排除 0 条）
+# 同步时间：2026-10-24 22:03 UTC
+# 规则数：7257（排除 0 条）
 DOMAIN,duclick.baidu.com
 DOMAIN,hm.baidu.com
 DOMAIN,hmma.baidu.com
@@ -1652,6 +1652,7 @@ DOMAIN-SUFFIX,bob.crazyshit.com
 DOMAIN-SUFFIX,bobo.163.com
 DOMAIN-SUFFIX,borsendental.com
 DOMAIN-SUFFIX,bosiwangzi.cn
+DOMAIN-SUFFIX,bouncex.net
 DOMAIN-SUFFIX,box.anchorfree.net
 DOMAIN-SUFFIX,boxercrazy.org
 DOMAIN-SUFFIX,boxshows.com
@@ -6607,6 +6608,7 @@ DOMAIN-SUFFIX,wiyun.com
 DOMAIN-SUFFIX,wjguc.com
 DOMAIN-SUFFIX,wka8.com
 DOMAIN-SUFFIX,wkanc.com
+DOMAIN-SUFFIX,wknd.ai
 DOMAIN-SUFFIX,wl.51taifu.com
 DOMAIN-SUFFIX,wl.eastlady.cn
 DOMAIN-SUFFIX,wlkpa.cn

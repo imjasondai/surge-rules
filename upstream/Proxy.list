@@ -1,7 +1,7 @@
 # Proxy（上游同步，请勿手改；要排除规则请写 exclude/Proxy.list）
 # 来源：https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/Proxy.list
-# 同步时间：2026-10-21 23:52 UTC
-# 规则数：1016（排除 0 条）
+# 同步时间：2026-10-24 22:03 UTC
+# 规则数：1028（排除 0 条）
 IP-CIDR,13.32.0.0/16,no-resolve
 IP-CIDR,13.33.0.0/16,no-resolve
 IP-CIDR,13.35.0.0/17,no-resolve
@@ -18,6 +18,7 @@ IP-CIDR,54.93.0.0/16,no-resolve
 IP-CIDR,54.156.0.0/14,no-resolve
 IP-CIDR,54.226.0.0/15,no-resolve
 IP-CIDR,54.230.156.0/22,no-resolve
+DOMAIN-SUFFIX,archiveofourown.org
 DOMAIN-SUFFIX,appledaily.com
 DOMAIN-SUFFIX,appledaily.com.hk
 DOMAIN-SUFFIX,appledaily.com.tw
@@ -48,6 +49,8 @@ DOMAIN-SUFFIX,dropboxstatic.com
 DOMAIN-SUFFIX,dropboxteam.com
 DOMAIN-SUFFIX,dropboxusercontent.com
 DOMAIN-SUFFIX,getdropbox.com
+DOMAIN-SUFFIX,e-hentai.org
+DOMAIN-SUFFIX,exhentai.org
 DOMAIN-SUFFIX,chalungu.cn
 DOMAIN-SUFFIX,wheel-size.cn
 DOMAIN-SUFFIX,facebook.com
@@ -362,6 +365,15 @@ IP-CIDR,203.104.103.0/24,no-resolve
 IP-CIDR,203.104.128.0/20,no-resolve
 IP-CIDR,203.174.66.64/26,no-resolve
 IP-CIDR,203.174.77.0/24,no-resolve
+DOMAIN-SUFFIX,bidobido.xyz
+DOMAIN-SUFFIX,bikaios.xyz
+DOMAIN-SUFFIX,bikawebapp.com
+DOMAIN-SUFFIX,diwodiwo.xyz
+DOMAIN-SUFFIX,huakacomic.com
+DOMAIN-SUFFIX,manhuabika.com
+DOMAIN-SUFFIX,pica-id.com
+DOMAIN-SUFFIX,tipatipa.xyz
+DOMAIN-SUFFIX,wikawika.xyz
 IP-CIDR,13.251.24.0/24,no-resolve
 IP-CIDR,13.251.41.0/24,no-resolve
 IP-CIDR,17.252.156.0/24,no-resolve

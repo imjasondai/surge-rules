@@ -1,7 +1,7 @@
 # AdBlock（上游同步，请勿手改；要排除规则请写 exclude/AdBlock.list）
 # 来源：https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/AdBlock.list
-# 同步时间：2026-10-24 22:03 UTC
-# 规则数：7257（排除 0 条）
+# 同步时间：2026-11-01 23:11 UTC
+# 规则数：7258（排除 0 条）
 DOMAIN,duclick.baidu.com
 DOMAIN,hm.baidu.com
 DOMAIN,hmma.baidu.com
@@ -43,6 +43,7 @@ IP-CIDR,222.186.61.91/32,no-resolve
 IP-CIDR,222.186.61.95/32,no-resolve
 IP-CIDR,222.186.61.96/32,no-resolve
 IP-CIDR,222.186.61.97/32,no-resolve
+DOMAIN,dm.wo.com.cn
 IP-CIDR,106.75.231.48/32,no-resolve
 IP-CIDR,119.4.249.166/32,no-resolve
 IP-CIDR,220.196.52.141/32,no-resolve

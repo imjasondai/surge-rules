@@ -1,7 +1,7 @@
 # Microsoft（上游同步，请勿手改；要排除规则请写 exclude/Microsoft.list）
 # 来源：https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/Microsoft.list
-# 同步时间：2026-10-21 23:52 UTC
-# 规则数：570（排除 0 条）
+# 同步时间：2026-11-03 01:54 UTC
+# 规则数：571（排除 0 条）
 DOMAIN-SUFFIX,azure
 DOMAIN-SUFFIX,azure-apim.net
 DOMAIN-SUFFIX,azure-dns.com
@@ -536,6 +536,7 @@ DOMAIN-SUFFIX,visualstudio.com
 DOMAIN-SUFFIX,visualstudio.eu
 DOMAIN-SUFFIX,visualstudio.net
 DOMAIN-SUFFIX,vsassets.io
+DOMAIN-SUFFIX,vscode-cdn.net
 DOMAIN-SUFFIX,vscode-unpkg.net
 DOMAIN-SUFFIX,vscode-webview.net
 DOMAIN-SUFFIX,vscode.dev

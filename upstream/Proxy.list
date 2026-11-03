@@ -1,7 +1,7 @@
 # Proxy（上游同步，请勿手改；要排除规则请写 exclude/Proxy.list）
 # 来源：https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/Proxy.list
-# 同步时间：2026-11-01 23:11 UTC
-# 规则数：1029（排除 0 条）
+# 同步时间：2026-11-03 01:54 UTC
+# 规则数：1031（排除 0 条）
 IP-CIDR,13.32.0.0/16,no-resolve
 IP-CIDR,13.33.0.0/16,no-resolve
 IP-CIDR,13.35.0.0/17,no-resolve
@@ -103,6 +103,7 @@ DOMAIN-SUFFIX,appspot.com
 DOMAIN-SUFFIX,autodraw.com
 DOMAIN-SUFFIX,blogblog.com
 DOMAIN-SUFFIX,chromeexperiments.com
+DOMAIN-SUFFIX,cloudproxy.app
 DOMAIN-SUFFIX,creativelab5.com
 DOMAIN-SUFFIX,culturalspot.org
 DOMAIN-SUFFIX,dartlang.org
@@ -702,6 +703,7 @@ DOMAIN-SUFFIX,nikke-kr.com
 DOMAIN-SUFFIX,nimg.jp
 DOMAIN-SUFFIX,nintendo.com
 DOMAIN-SUFFIX,nintendo.net
+DOMAIN-SUFFIX,notion.com
 DOMAIN-SUFFIX,notion.so
 DOMAIN-SUFFIX,novafile.com
 DOMAIN-SUFFIX,nrk.no

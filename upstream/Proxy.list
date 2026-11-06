@@ -1,7 +1,7 @@
 # Proxy（上游同步，请勿手改；要排除规则请写 exclude/Proxy.list）
 # 来源：https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/Proxy.list
-# 同步时间：2026-11-03 01:54 UTC
-# 规则数：1031（排除 0 条）
+# 同步时间：2026-11-06 23:51 UTC
+# 规则数：1039（排除 0 条）
 IP-CIDR,13.32.0.0/16,no-resolve
 IP-CIDR,13.33.0.0/16,no-resolve
 IP-CIDR,13.35.0.0/17,no-resolve
@@ -366,6 +366,9 @@ IP-CIDR,203.104.103.0/24,no-resolve
 IP-CIDR,203.104.128.0/20,no-resolve
 IP-CIDR,203.174.66.64/26,no-resolve
 IP-CIDR,203.174.77.0/24,no-resolve
+DOMAIN-SUFFIX,element.io
+DOMAIN-SUFFIX,matrix.org
+DOMAIN-SUFFIX,vector.im
 DOMAIN-SUFFIX,bidobido.xyz
 DOMAIN-SUFFIX,bikaios.xyz
 DOMAIN-SUFFIX,bikawebapp.com
@@ -396,6 +399,8 @@ DOMAIN-SUFFIX,tesla.cn
 DOMAIN-SUFFIX,tesla.com
 DOMAIN-SUFFIX,teslamotors.com
 DOMAIN,testflight.apple.com
+DOMAIN-SUFFIX,gotinder.com
+DOMAIN-SUFFIX,tindersparks.com
 DOMAIN-SUFFIX,2o7.net
 DOMAIN-SUFFIX,4everProxy.com
 DOMAIN-SUFFIX,4shared.com
@@ -1023,6 +1028,9 @@ DOMAIN-SUFFIX,twitterflightschool.com
 DOMAIN-SUFFIX,twitterinc.com
 DOMAIN-SUFFIX,twitteroauth.com
 DOMAIN-SUFFIX,twitterstat.us
+DOMAIN-SUFFIX,greasyfork.org
+DOMAIN-SUFFIX,sleazyfork.org
+DOMAIN-SUFFIX,tampermonkey.net
 DOMAIN-SUFFIX,v2ex.com
 DOMAIN-SUFFIX,picjs.xyz
 DOMAIN-SUFFIX,vikacg.com

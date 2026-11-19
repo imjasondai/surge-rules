@@ -1,7 +1,7 @@
 # AI-Suite（上游同步，请勿手改；要排除规则请写 exclude/AI-Suite.list）
 # 来源：https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/AI%20Suite.list
-# 同步时间：2026-10-23 11:01 UTC
-# 规则数：192（排除 0 条）
+# 同步时间：2026-11-19 01:33 UTC
+# 规则数：193（排除 0 条）
 DOMAIN,apple-relay.apple.com
 DOMAIN,apple-relay.cloudflare.com
 DOMAIN,apple-relay.fastly-edge.com
@@ -96,23 +96,23 @@ DOMAIN-SUFFIX,makersuite.google.com
 DOMAIN,waa-pa.clients6.google.com
 DOMAIN-SUFFIX,antigravity.google
 DOMAIN-SUFFIX,antigravity.google.com
-DOMAIN,cloudcode-pa.googleapis.com
-DOMAIN,daily-cloudcode-pa.googleapis.com
-DOMAIN,daily-cloudcode-pa.sandbox.googleapis.com
-DOMAIN,aiplatform.eu.rep.googleapis.com
-DOMAIN,aiplatform.googleapis.com
-DOMAIN,aiplatform.mtls.googleapis.com
-DOMAIN,aiplatform.us.rep.googleapis.com
-DOMAIN,businessaicode.eu.rep.googleapis.com
-DOMAIN,businessaicode.googleapis.com
-DOMAIN,businessaicode.mtls.googleapis.com
-DOMAIN,businessaicode.us.rep.googleapis.com
-DOMAIN,discoveryengine.googleapis.com
-DOMAIN,discoveryengine.mtls.googleapis.com
-DOMAIN,eu-discoveryengine.googleapis.com
-DOMAIN,eu-discoveryengine.mtls.googleapis.com
-DOMAIN,us-discoveryengine.googleapis.com
-DOMAIN,us-discoveryengine.mtls.googleapis.com
+DOMAIN-SUFFIX,cloudcode-pa.googleapis.com
+DOMAIN-SUFFIX,daily-cloudcode-pa.googleapis.com
+DOMAIN-SUFFIX,daily-cloudcode-pa.sandbox.googleapis.com
+DOMAIN-SUFFIX,aiplatform.eu.rep.googleapis.com
+DOMAIN-SUFFIX,aiplatform.googleapis.com
+DOMAIN-SUFFIX,aiplatform.mtls.googleapis.com
+DOMAIN-SUFFIX,aiplatform.us.rep.googleapis.com
+DOMAIN-SUFFIX,businessaicode.eu.rep.googleapis.com
+DOMAIN-SUFFIX,businessaicode.googleapis.com
+DOMAIN-SUFFIX,businessaicode.mtls.googleapis.com
+DOMAIN-SUFFIX,businessaicode.us.rep.googleapis.com
+DOMAIN-SUFFIX,discoveryengine.googleapis.com
+DOMAIN-SUFFIX,discoveryengine.mtls.googleapis.com
+DOMAIN-SUFFIX,eu-discoveryengine.googleapis.com
+DOMAIN-SUFFIX,eu-discoveryengine.mtls.googleapis.com
+DOMAIN-SUFFIX,us-discoveryengine.googleapis.com
+DOMAIN-SUFFIX,us-discoveryengine.mtls.googleapis.com
 DOMAIN,aida.googleapis.com
 DOMAIN-SUFFIX,deepmind.com
 DOMAIN-SUFFIX,deepmind.google
@@ -148,6 +148,7 @@ DOMAIN,ssl.gstatic.com
 DOMAIN,streetviewpixels-pa.googleapis.com
 DOMAIN-SUFFIX,geller-pa.googleapis.com
 DOMAIN-SUFFIX,generativelanguage.googleapis.com
+DOMAIN,generativelanguage.mtls.googleapis.com
 DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
 DOMAIN-SUFFIX,jules.google
 DOMAIN-SUFFIX,jules.google.com
